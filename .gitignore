@@ -1,0 +1,27 @@
+# Local IDE settings and build output
+.idea/
+.vscode/
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+compile_commands.json
+
+# Binaries and compiler artifacts
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.lib
+*.pdb
+
+# Helper-script caches and local files
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

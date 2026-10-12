@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.svg text
+# GitHub language statistics should represent solutions, not repository tooling.
+tools/** linguist-detectable=false
+tests/** linguist-detectable=false

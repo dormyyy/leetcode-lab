@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-labelledby="title description">
+  <title id="title">LeetCode Lab by dormyyy</title>
+  <desc id="description">A personal C++ problem-solving journal. Think, prove, improve.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#101827"/>
+      <stop offset="1" stop-color="#182b42"/>
+    </linearGradient>
+    <linearGradient id="accent">
+      <stop stop-color="#ffb454"/>
+      <stop offset="1" stop-color="#ff7c66"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity=".035"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="320" rx="20" fill="url(#background)"/>
+  <rect width="1280" height="320" rx="20" fill="url(#grid)"/>
+  <rect x="56" y="61" width="5" height="200" rx="2.5" fill="url(#accent)"/>
+  <g font-family="Segoe UI, Inter, Arial, sans-serif">
+    <text x="88" y="92" fill="#9bb0c8" font-size="17" letter-spacing="3">DORMYYY / ALGORITHMS IN C++</text>
+    <text x="86" y="166" fill="#f2f6fc" font-size="62" font-weight="700">LeetCode Lab</text>
+    <text x="89" y="216" fill="#cad6e5" font-size="25">Think. Prove. Improve.</text>
+    <text x="89" y="258" fill="#9bb0c8" font-size="17">Solutions · Reasoning · Complexity · Lessons learned</text>
+  </g>
+  <g transform="translate(1020 84)" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 0 23 L -35 60 L 0 97"/>
+    <path d="M 130 23 L 165 60 L 130 97"/>
+    <path d="M 86 0 L 43 120"/>
+  </g>
+</svg>

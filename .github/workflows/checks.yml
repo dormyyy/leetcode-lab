@@ -1,0 +1,29 @@
+name: Repository checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.12'
+      - name: Test repository helper
+        run: python -m unittest discover -s tests -v
+      - name: Validate problem metadata and progress
+        run: python tools/leetcode.py check
+      - name: Configure C++17 problem targets
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+      - name: Build independent problem targets
+        run: cmake --build build --parallel 2
+      - name: Compile the C++ starter
+        run: c++ -std=c++17 -Wall -Wextra -Wpedantic templates/cpp/main.cpp -o build/template-check
