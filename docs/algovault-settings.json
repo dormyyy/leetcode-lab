@@ -1,0 +1,7 @@
+{
+  "owner": "dormyyy",
+  "repo": "leetcode-lab",
+  "branch": "main",
+  "folderTemplate": "browser-sync/{number}-{slug}",
+  "fileTemplate": "solution{ext}"
+}

@@ -84,7 +84,7 @@ GitHub Actions also syncs on relevant pushes and every six hours. It updates the
 python tools/leetcode.py done add-two-numbers
 ```
 
-The sync never replaces my source code. When I solve in the website editor, I copy that C++ solution into `solution.cpp`. Automatic browser-to-GitHub code export requires a separately connected browser extension or authenticated submission access.
+For browser-to-GitHub code sync, connect **AlgoVault** using [the Opera setup guide](docs/BROWSER_SYNC.ru.md) and [ready-made settings](docs/algovault-settings.json). Accepted submissions go to `browser-sync/`; Actions imports them into the task's `accepted/` archive and updates the journal. It replaces a C++ starter or an unmodified previous import while preserving my own edits and notes. Browser installation and token authorization must be completed separately.
 
 Only meaningful profile/status changes create sync commits. Both author and committer are configured as `dormyyy` with my GitHub noreply email. Failed requests keep the last successful snapshot.
 
@@ -93,6 +93,7 @@ Only meaningful profile/status changes create sync commits. Both author and comm
 | Path | Purpose |
 | --- | --- |
 | [`problems/`](problems/) | One folder per task; several approaches can live together |
+| [`browser-sync/`](browser-sync/) | Original Accepted code uploaded by AlgoVault |
 | [`include/leetcode.hpp`](include/leetcode.hpp) | Local list/tree builders and output checks |
 | [`templates/cpp/`](templates/cpp/) | Offline C++ templates |
 | [`tools/`](tools/) | Problem import, runner generation, and profile sync |

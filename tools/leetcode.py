@@ -339,6 +339,7 @@ def main() -> int:
     done = commands.add_parser("done", help="mark a problem solved after an Accepted submission")
     done.add_argument("id", help="problem ID or slug")
     commands.add_parser("sync", help="sync public LeetCode counters and recent Accepted statuses")
+    commands.add_parser("import-browser", help="import Accepted code uploaded by the browser extension")
     driver = commands.add_parser("driver", help="regenerate local calls from cases.json (also used by CMake)")
     driver.add_argument("target")
     run = commands.add_parser("run", help="compile and run a local problem without reading stdin")
@@ -361,6 +362,10 @@ def main() -> int:
         elif args.command == "sync":
             profile = sync_profile()
             print(f"Synced {profile['username']}: {profile['solved']['All']} solved on LeetCode")
+        elif args.command == "import-browser":
+            from tools.browser_import import import_browser
+            changed = import_browser(ROOT)
+            print("Imported: " + ", ".join(changed) if changed else "Browser archive is already up to date.")
         elif args.command == "driver":
             print(f"Generated: {generate_driver(args.target)}")
         elif args.command == "run":
