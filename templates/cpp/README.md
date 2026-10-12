@@ -21,7 +21,7 @@ _List the cases that could break the solution._
 
 ## Local checks
 
-_Add cases to main.cpp and record what you checked. The initial runner has no tests._
+_For downloaded tasks, edit cases.json and run the task in CLion or with `python tools/leetcode.py run`. Examples print actual results; add an `expected` field for an output check. For offline templates, add calls to main.cpp. Record what you checked._
 
 ## Takeaway
 

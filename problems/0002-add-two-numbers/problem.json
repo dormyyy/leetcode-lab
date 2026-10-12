@@ -1,0 +1,33 @@
+{
+  "id": 2,
+  "slug": "add-two-numbers",
+  "title": "Add Two Numbers",
+  "difficulty": "Medium",
+  "status": "in-progress",
+  "topics": [
+    "linked-list",
+    "math",
+    "recursion"
+  ],
+  "solved_on": null,
+  "signature": {
+    "name": "addTwoNumbers",
+    "params": [
+      {
+        "name": "l1",
+        "type": "ListNode",
+        "dealloc": false
+      },
+      {
+        "name": "l2",
+        "type": "ListNode",
+        "dealloc": false
+      }
+    ],
+    "return": {
+      "type": "ListNode",
+      "dealloc": true
+    }
+  },
+  "runner": "automatic"
+}

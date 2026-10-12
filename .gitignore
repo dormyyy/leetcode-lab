@@ -2,6 +2,8 @@
 .idea/
 .vscode/
 build/
+work/
+problems/*/cases.generated.hpp
 cmake-build-*/
 CMakeFiles/
 CMakeCache.txt

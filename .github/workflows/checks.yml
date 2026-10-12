@@ -27,3 +27,7 @@ jobs:
         run: cmake --build build --parallel 2
       - name: Compile the C++ starter
         run: c++ -std=c++17 -Wall -Wextra -Wpedantic templates/cpp/main.cpp -o build/template-check
+      - name: Check local list/tree builders and output comparisons
+        run: |
+          c++ -std=c++17 -Wall -Wextra -Wpedantic tests/runner_fixture.cpp -o build/runner-fixture
+          ./build/runner-fixture

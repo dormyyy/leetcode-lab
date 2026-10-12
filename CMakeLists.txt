@@ -24,6 +24,18 @@ foreach(problem_dir IN LISTS problem_entries)
         message(FATAL_ERROR "Use a problem folder such as 0001-two-sum: ${problem_name}")
     endif()
     set(target "problem_${problem_name}")
+    if(EXISTS "${problem_dir}/cases.json")
+        find_package(Python3 3.10 COMPONENTS Interpreter REQUIRED)
+        add_custom_command(
+            OUTPUT "${problem_dir}/cases.generated.hpp"
+            COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tools/leetcode.py" driver "${problem_name}"
+            DEPENDS "${problem_dir}/cases.json" "${problem_dir}/problem.json"
+                    "${CMAKE_CURRENT_SOURCE_DIR}/tools/leetcode.py"
+                    "${CMAKE_CURRENT_SOURCE_DIR}/tools/cpp_runner.py"
+            VERBATIM
+        )
+        add_custom_target("generate_${target}" DEPENDS "${problem_dir}/cases.generated.hpp")
+    endif()
     if(EXISTS "${problem_dir}/main.cpp")
         # main.cpp includes solution.cpp for local checks.
         add_executable(${target} "${problem_dir}/main.cpp")
@@ -34,4 +46,7 @@ foreach(problem_dir IN LISTS problem_entries)
         continue()
     endif()
     configure_problem_target(${target})
+    if(TARGET "generate_${target}")
+        add_dependencies(${target} "generate_${target}")
+    endif()
 endforeach()

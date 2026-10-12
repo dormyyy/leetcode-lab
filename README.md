@@ -3,78 +3,101 @@
 # LeetCode Lab
 
 [![Repository checks](https://github.com/dormyyy/leetcode-lab/actions/workflows/checks.yml/badge.svg)](https://github.com/dormyyy/leetcode-lab/actions/workflows/checks.yml)
+[![Profile sync](https://github.com/dormyyy/leetcode-lab/actions/workflows/sync.yml/badge.svg)](https://github.com/dormyyy/leetcode-lab/actions/workflows/sync.yml)
 ![Language: C++17](https://img.shields.io/badge/solutions-C%2B%2B17-00599C?style=flat)
-![Focus: problem solving](https://img.shields.io/badge/focus-problem%20solving-ffb454?style=flat)
 
 My personal algorithm practice journal. Each problem gets its own C++ solution, reasoning, complexity analysis, and notes on what I learned.
 
-**Owner:** [@dormyyy](https://github.com/dormyyy) · **Platform:** [LeetCode](https://leetcode.com/) · **Started:** October 2026
+**Owner:** [@dormyyy](https://github.com/dormyyy) · **LeetCode:** [dormyyy](https://leetcode.com/u/dormyyy/) · **Started:** October 2026
 
 ## Progress
 
-Only problems marked `solved` after an **Accepted** submission count as solved. This is a self-maintained journal; the repository does not read my LeetCode account.
+The account counter comes from my public LeetCode profile, including earlier solutions. The repository journal tracks the tasks saved here. Public data does not expose my private submission code.
 
 <!-- PROGRESS:START -->
-**0 solved** · **0 in progress** · **0 planned**
+### LeetCode account · [dormyyy](https://leetcode.com/u/dormyyy/)
+
+**8 solved on LeetCode**
+
+| Easy | Medium | Hard |
+| :---: | :---: | :---: |
+| 8 | 0 | 0 |
+
+Snapshot updated: 2026-10-12 20:22 (UTC). Includes earlier solutions outside this repository.
+
+### Repository journal
+
+**0 solved** · **1 in progress** · **0 planned**
 
 | Easy solved | Medium solved | Hard solved |
 | :---: | :---: | :---: |
 | 0 | 0 | 0 |
 
-The journal is ready. The first problem will appear here when I start practicing.
+| # | Problem | Difficulty | Topics | Status | Solved on |
+| --- | --- | --- | --- | --- | --- |
+| 2 | [Add Two Numbers](problems/0002-add-two-numbers/) | Medium | linked-list, math, recursion | In progress | — |
 <!-- PROGRESS:END -->
 
-## Add a problem
+## One name, one folder
 
-From the repository root (Python 3.10+; no packages required):
+Python 3.10+; no packages, password, or session cookies required:
 
 ```powershell
-python tools/leetcode.py new 1 two-sum --title "Two Sum" --difficulty Easy --topics array hash-table
+python tools/leetcode.py new add-two-numbers
 ```
 
-This creates `problems/0001-two-sum/` with four files:
+The command downloads the problem number, title, difficulty, tags, original C++ starter signature, and example inputs. Existing solutions are never overwritten.
 
 ```text
-problems/0001-two-sum/
-├── problem.json   # Metadata and progress status
-├── README.md      # Approach, correctness, complexity, and lessons
-├── solution.cpp   # Code to submit to LeetCode
-└── main.cpp       # Local runner; add your own checks
+problems/0002-add-two-numbers/
+├── solution.cpp   # Write the algorithm here; paste this file into LeetCode
+├── cases.json     # Example inputs; add your own cases and optional expected results
+├── main.cpp       # Local entry point, separate from the submitted code
+├── types.hpp      # Additional local types, when supplied by the starter
+├── problem.json   # Metadata, function signature, and progress
+└── README.md      # Approach, correctness, complexity, and lessons
 ```
 
-Write the solution, add local checks, and explain the approach. After LeetCode returns **Accepted**:
+## Solve the algorithm, skip stdin
+
+LeetCode calls a method such as `Solution::addTwoNumbers(ListNode*, ListNode*)`. Its array-shaped input represents linked lists; the local runner constructs those nodes automatically.
 
 ```powershell
-python tools/leetcode.py done 1
+python tools/leetcode.py run add-two-numbers
 ```
 
-The command records the completion date and refreshes this progress table. You can also create folders by hand: use `0001-two-sum` naming and the same `problem.json` format as in [the guide](docs/START_HERE.ru.md). After manual edits, run:
+Or open the repository root in **CLion**, reload CMake, and select `problem_0002-add-two-numbers`. CMake regenerates the local calls when `cases.json` changes. Each problem builds independently.
+
+The runner supports scalars, strings, arrays, matrices, linked lists, binary trees, and ordinary design-class operation sequences. Custom judges and unsupported interfaces use an explicit manual-runner fallback. Starter methods throw a clear “implement first” error until I write the solution.
+
+Example inputs print actual outputs. An optional `expected` field adds an output check; check semantics can differ from LeetCode when several answers or output orders are valid. Scalar floating-point checks use a relative/absolute tolerance of `1e-9`. LeetCode's full judge remains the final correctness check.
+
+## Sync the profile
 
 ```powershell
-python tools/leetcode.py refresh
+python tools/leetcode.py sync
 ```
 
-## Run C++ locally
-
-Open the repository root in **CLion**, reload CMake after adding a problem, and select its `problem_0001-two-sum` run target.
-
-Or use a C++ compiler and CMake from a terminal:
+GitHub Actions also syncs on relevant pushes and every six hours. It updates the account counter and marks saved, non-starter tasks Accepted when they appear in the public recent Accepted list. That list contains at most 20 entries, not the complete historical archive. For older accepted tasks, use:
 
 ```powershell
-cmake -S . -B build
-cmake --build build --target problem_0001-two-sum
+python tools/leetcode.py done add-two-numbers
 ```
 
-Each folder is built separately. Submit `solution.cpp`; keep local input, custom node definitions, and checks in `main.cpp`.
+The sync never replaces my source code. When I solve in the website editor, I copy that C++ solution into `solution.cpp`. Automatic browser-to-GitHub code export requires a separately connected browser extension or authenticated submission access.
+
+Only meaningful profile/status changes create sync commits. Both author and committer are configured as `dormyyy` with my GitHub noreply email. Failed requests keep the last successful snapshot.
 
 ## Repository map
 
 | Path | Purpose |
 | --- | --- |
-| [`problems/`](problems/) | One folder per problem; several solution files may live together |
-| [`templates/cpp/`](templates/cpp/) | Starter solution, local runner, and explanation template |
-| [`tools/leetcode.py`](tools/leetcode.py) | Create tasks and maintain the progress index |
-| [`docs/START_HERE.ru.md`](docs/START_HERE.ru.md) | Russian guide to daily use and publishing |
-| [GitHub Actions](https://github.com/dormyyy/leetcode-lab/actions) | Metadata, progress-index, helper, and C++ build checks |
+| [`problems/`](problems/) | One folder per task; several approaches can live together |
+| [`include/leetcode.hpp`](include/leetcode.hpp) | Local list/tree builders and output checks |
+| [`templates/cpp/`](templates/cpp/) | Offline C++ templates |
+| [`tools/`](tools/) | Problem import, runner generation, and profile sync |
+| [`leetcode.json`](leetcode.json) | Public LeetCode username |
+| [`progress/leetcode.json`](progress/leetcode.json) | Last meaningful account snapshot |
+| [`docs/START_HERE.ru.md`](docs/START_HERE.ru.md) | Russian guide, cases, and publishing |
 
-CI checks that the repository is consistent and the C++ code builds. Correctness is established through local test cases and LeetCode submissions.
+CI checks the helper, metadata, progress index, C++ harness, and independent problem builds. It does not submit solutions or claim that unfinished algorithms pass LeetCode.
