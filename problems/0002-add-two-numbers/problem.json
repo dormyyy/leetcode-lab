@@ -3,13 +3,13 @@
   "slug": "add-two-numbers",
   "title": "Add Two Numbers",
   "difficulty": "Medium",
-  "status": "in-progress",
+  "status": "solved",
   "topics": [
     "linked-list",
     "math",
     "recursion"
   ],
-  "solved_on": null,
+  "solved_on": "2026-10-15",
   "signature": {
     "name": "addTwoNumbers",
     "params": [
@@ -29,5 +29,16 @@
       "dealloc": true
     }
   },
-  "runner": "automatic"
+  "runner": "automatic",
+  "browser_sync": {
+    "files": {
+      "solution.cpp": {
+        "sha256": "6d68a05e06137931fd9acf27ab12b1a333b7932636ad0147edce7464892008c4",
+        "saved_as": "accepted/solution.cpp"
+      }
+    },
+    "latest_cpp": "accepted/solution.cpp"
+  },
+  "solved_on_source": "first-browser-import",
+  "status_source": "browser-extension"
 }

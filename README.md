@@ -17,25 +17,25 @@ The account counter comes from my public LeetCode profile, including earlier sol
 <!-- PROGRESS:START -->
 ### LeetCode account · [dormyyy](https://leetcode.com/u/dormyyy/)
 
-**8 solved on LeetCode**
+**9 solved on LeetCode**
 
 | Easy | Medium | Hard |
 | :---: | :---: | :---: |
-| 8 | 0 | 0 |
+| 8 | 1 | 0 |
 
-Snapshot updated: 2026-10-12 20:22 (UTC). Includes earlier solutions outside this repository.
+Snapshot updated: 2026-10-15 20:01 (UTC). Includes earlier solutions outside this repository.
 
 ### Repository journal
 
-**0 solved** · **1 in progress** · **0 planned**
+**1 solved** · **0 in progress** · **0 planned**
 
 | Easy solved | Medium solved | Hard solved |
 | :---: | :---: | :---: |
-| 0 | 0 | 0 |
+| 0 | 1 | 0 |
 
 | # | Problem | Difficulty | Topics | Status | Solved on |
 | --- | --- | --- | --- | --- | --- |
-| 2 | [Add Two Numbers](problems/0002-add-two-numbers/) | Medium | linked-list, math, recursion | In progress | — |
+| 2 | [Add Two Numbers](problems/0002-add-two-numbers/) | Medium | linked-list, math, recursion | Accepted | 2026-10-15 |
 <!-- PROGRESS:END -->
 
 ## One name, one folder
@@ -108,13 +108,13 @@ CI checks the helper, metadata, progress index, C++ harness, and independent pro
 ## Linked List
 |  |
 | ------- |
-| [browser-sync/0002-add-two-numbers](https://github.com/dormyyy/leetcode-lab/tree/master/browser-sync/0002-add-two-numbers) |
+| [browser-sync/0002-add-two-numbers](https://github.com/dormyyy/leetcode-lab/tree/main/browser-sync/0002-add-two-numbers) |
 ## Math
 |  |
 | ------- |
-| [browser-sync/0002-add-two-numbers](https://github.com/dormyyy/leetcode-lab/tree/master/browser-sync/0002-add-two-numbers) |
+| [browser-sync/0002-add-two-numbers](https://github.com/dormyyy/leetcode-lab/tree/main/browser-sync/0002-add-two-numbers) |
 ## Recursion
 |  |
 | ------- |
-| [browser-sync/0002-add-two-numbers](https://github.com/dormyyy/leetcode-lab/tree/master/browser-sync/0002-add-two-numbers) |
+| [browser-sync/0002-add-two-numbers](https://github.com/dormyyy/leetcode-lab/tree/main/browser-sync/0002-add-two-numbers) |
 <!---LeetCode Topics End-->

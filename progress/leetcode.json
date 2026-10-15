@@ -1,11 +1,17 @@
 {
   "username": "dormyyy",
   "solved": {
-    "All": 8,
+    "All": 9,
     "Easy": 8,
-    "Medium": 0,
+    "Medium": 1,
     "Hard": 0
   },
-  "recent_accepted": [],
-  "updated_at": "2026-10-12 20:22"
+  "recent_accepted": [
+    {
+      "id": "2173361404",
+      "titleSlug": "add-two-numbers",
+      "timestamp": "1792094240"
+    }
+  ],
+  "updated_at": "2026-10-15 20:01"
 }
