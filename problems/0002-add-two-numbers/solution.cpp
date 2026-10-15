@@ -33,21 +33,10 @@ using namespace std;
  */
 class Solution {
 public:
-    static void print_ll(const ListNode* l, const size_t n) {
-        cout<<'[';
-        cout<<l->val;
-        l = l->next;
-        for (size_t i = 0; i < n - 1; i++) {
-            cout<<','<<l->val;
-            l = l->next;
-        }
-        cout<<']'<<endl;
-    }
 
     static ListNode* addTwoNumbers(const ListNode* l1, const ListNode* l2) {
         int n = 0;
         int l = 0;
-        size_t length = 0;
         ListNode dummy;
         ListNode* tail = &dummy;
         while (l1 != nullptr && l2 != nullptr) {
@@ -56,7 +45,6 @@ public:
             l = sum / 10;
             tail->next = new ListNode(n);
             tail = tail->next;
-            length++;
 
             l1 = l1->next;
             l2 = l2->next;
@@ -69,7 +57,6 @@ public:
             l = sum / 10;
             tail->next = new ListNode(n);
             tail = tail->next;
-            length++;
 
             rest = rest->next;
         }
@@ -77,9 +64,7 @@ public:
         if (l) {
             tail->next = new ListNode(l);
             tail = tail->next;
-            length++;
         }
-        print_ll(dummy.next, length);
         return dummy.next;
     }
 };
