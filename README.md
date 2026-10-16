@@ -17,13 +17,13 @@ The account counter comes from my public LeetCode profile, including earlier sol
 <!-- PROGRESS:START -->
 ### LeetCode account · [dormyyy](https://leetcode.com/u/dormyyy/)
 
-**9 solved on LeetCode**
+**10 solved on LeetCode**
 
 | Easy | Medium | Hard |
 | :---: | :---: | :---: |
-| 8 | 1 | 0 |
+| 8 | 2 | 0 |
 
-Snapshot updated: 2026-10-15 20:01 (UTC). Includes earlier solutions outside this repository.
+Snapshot updated: 2026-10-16 16:40 (UTC). Includes earlier solutions outside this repository.
 
 ### Repository journal
 

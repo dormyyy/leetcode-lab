@@ -1,17 +1,22 @@
 {
   "username": "dormyyy",
   "solved": {
-    "All": 9,
+    "All": 10,
     "Easy": 8,
-    "Medium": 1,
+    "Medium": 2,
     "Hard": 0
   },
   "recent_accepted": [
+    {
+      "id": "2173805314",
+      "titleSlug": "longest-substring-without-repeating-characters",
+      "timestamp": "1792152698"
+    },
     {
       "id": "2173361404",
       "titleSlug": "add-two-numbers",
       "timestamp": "1792094240"
     }
   ],
-  "updated_at": "2026-10-15 20:01"
+  "updated_at": "2026-10-16 16:40"
 }
